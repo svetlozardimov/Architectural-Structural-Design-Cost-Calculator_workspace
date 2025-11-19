@@ -28,7 +28,7 @@ const ArchitecturalMainContent: React.FC<ArchitecturalMainContentProps> = ({ for
                 </div>
             </CardHeader>
             {formState.toggleNewBuildings && (
-                <CardContent className="space-y-4 animate-fade-in">
+                <CardContent className="space-y-4">
                     <Select label="Вид обект" id="buildingType" value={formState.buildingType} onChange={(e) => onInputChange('buildingType', e.target.value)}>
                         <option value="0">-- Изберете вид --</option>
                         <option value="1">Еднофамилна, Двуфамилна жилищна, Вилна сграда</option>
@@ -64,7 +64,7 @@ const ArchitecturalMainContent: React.FC<ArchitecturalMainContentProps> = ({ for
                 </div>
             </CardHeader>
             {formState.toggleDevelopmentPlans && (
-                <CardContent className="space-y-4 animate-fade-in">
+                <CardContent className="space-y-4">
                      <Select label="Вид ПУП" id="planType" value={formState.planType} onChange={(e) => onInputChange('planType', e.target.value)}>
                         <option value="0">-- Изберете вид ПУП --</option>
                         <option value="1">План за застрояване</option>
@@ -97,7 +97,7 @@ const ArchitecturalMainContent: React.FC<ArchitecturalMainContentProps> = ({ for
                 </div>
             </CardHeader>
             {formState.toggleHourlyRate && (
-                <CardContent className="space-y-4 animate-fade-in">
+                <CardContent className="space-y-4">
                     <Select label="Тип проектант" id="designerType" value={formState.designerType} onChange={(e) => onInputChange('designerType', e.target.value)}>
                         <option value="0">-- Изберете тип --</option>
                         <option value="200.00">С пълна правоспособност (200.00 лв/ч)</option>
