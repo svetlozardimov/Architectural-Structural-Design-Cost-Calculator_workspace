@@ -80,10 +80,12 @@ const Results: React.FC<ResultsProps> = ({ result, formState, onPrint, onExport 
           {formatPrice()}
         </p>
         
-        {/* Logs */}
-        <div className="bg-white dark:bg-bunker-800/50 p-4 rounded-lg text-left font-mono text-sm text-bunker-700 dark:text-bunker-300 min-h-[120px] overflow-x-auto">
+        {/* Logs Container - Fixed Height to prevent jumping */}
+        <div className="bg-white dark:bg-bunker-800/50 p-4 rounded-lg text-left font-mono text-sm text-bunker-700 dark:text-bunker-300 h-72 overflow-y-auto custom-scrollbar">
           {error ? (
-            <div className="text-red-500 font-semibold flex items-center justify-center h-full">{log.join('\n')}</div>
+            <div className="text-red-500 font-semibold flex items-center justify-center h-full whitespace-pre-wrap text-center">
+                {log.join('\n')}
+            </div>
           ) : (
             <div className="space-y-3">
                 {formatLog(log)}

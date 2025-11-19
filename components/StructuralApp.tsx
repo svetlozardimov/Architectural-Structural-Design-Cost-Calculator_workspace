@@ -15,9 +15,10 @@ import Input from './common/Input';
 import Button from './common/Button';
 import { XIcon } from './icons';
 
-const WORKSPACE_STORAGE_KEY = 'sk_workspace_data';
-const WORKSPACE_NAME_KEY = 'sk_workspace_name';
-const CURRENT_STATE_KEY = 'sk_current_state';
+// UNIQUE KEYS FOR STRUCTURAL CALCULATOR
+const WORKSPACE_STORAGE_KEY = 'struct_workspace_data';
+const WORKSPACE_NAME_KEY = 'struct_workspace_name';
+const CURRENT_STATE_KEY = 'struct_current_state';
 
 const sanitizeProject = (p: any): SavedProject => {
   const fallbackId = Date.now().toString() + Math.random().toString(36).substr(2, 9);
@@ -182,7 +183,7 @@ export default function StructuralApp({ onBack, isSidebarOpen }: StructuralAppPr
   const showCoefficients = selectedType && category !== 'I' && category !== 'VII';
 
   return (
-    <div className="space-y-6 animate-fade-in">
+    <div className="space-y-6">
         <div className="flex items-center justify-between">
              <Button variant="secondary" onClick={onBack} className="mb-4 text-sm">← Обратно към начало</Button>
              <h2 className="text-xl font-bold text-bunker-800 dark:text-bunker-100 text-center flex-1 mr-auto ml-4">
@@ -190,7 +191,7 @@ export default function StructuralApp({ onBack, isSidebarOpen }: StructuralAppPr
              </h2>
         </div>
 
-        <div className={`grid grid-cols-1 ${isSidebarOpen ? 'lg:grid-cols-3' : 'lg:grid-cols-1'} gap-8 transition-all duration-300`}>
+        <div className={`grid grid-cols-1 ${isSidebarOpen ? 'lg:grid-cols-3' : 'lg:grid-cols-1'} gap-8`}>
           <div className={`${isSidebarOpen ? 'lg:col-span-2' : ''} space-y-8`}>
             <MainContent formState={formState} onInputChange={handleInputChange} />
             <Results

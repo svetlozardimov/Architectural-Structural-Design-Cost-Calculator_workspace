@@ -14,8 +14,9 @@ import Checkbox from './common/Checkbox';
 import Input from './common/Input';
 import Button from './common/Button';
 
-const WORKSPACE_STORAGE_KEY = 'sk_workspace_data';
-const WORKSPACE_NAME_KEY = 'sk_workspace_name';
+// UNIQUE KEYS FOR ARCHITECTURAL CALCULATOR
+const WORKSPACE_STORAGE_KEY = 'arch_workspace_data';
+const WORKSPACE_NAME_KEY = 'arch_workspace_name';
 const ARCH_CURRENT_STATE_KEY = 'arch_current_state';
 
 // Helper to sanitize loaded projects
@@ -159,7 +160,7 @@ export default function ArchitecturalApp({ onBack, isSidebarOpen }: Architectura
     }, []);
 
     return (
-        <div className="space-y-6 animate-fade-in">
+        <div className="space-y-6">
             <div className="flex items-center justify-between">
                 <Button variant="secondary" onClick={onBack} className="mb-4 text-sm">← Обратно към начало</Button>
                 <h2 className="text-xl font-bold text-bunker-800 dark:text-bunker-100 text-center flex-1 mr-auto ml-4">
@@ -167,7 +168,7 @@ export default function ArchitecturalApp({ onBack, isSidebarOpen }: Architectura
                 </h2>
             </div>
 
-            <div className={`grid grid-cols-1 ${isSidebarOpen ? 'lg:grid-cols-3' : 'lg:grid-cols-1'} gap-8 transition-all duration-300`}>
+            <div className={`grid grid-cols-1 ${isSidebarOpen ? 'lg:grid-cols-3' : 'lg:grid-cols-1'} gap-8`}>
                 <div className={`${isSidebarOpen ? 'lg:col-span-2' : ''} space-y-8`}>
                     <ArchitecturalMainContent formState={formState} onInputChange={handleInputChange} />
                     <Results
