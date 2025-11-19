@@ -44,10 +44,7 @@ export default function App() {
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                                 </svg>
                             </div>
-                            <h3 className="text-2xl font-bold text-bunker-800 dark:text-bunker-100 mb-3">Част Архитектура</h3>
-                            <p className="text-bunker-500 dark:text-bunker-400 text-sm mb-6 flex-grow">
-                                Калкулатор за архитектурно проектиране на нови сгради, ПУП и работа на часова ставка.
-                            </p>
+                            <h3 className="text-xl font-bold text-bunker-800 dark:text-bunker-100 mb-6 flex-grow flex items-center">Себестойност на проектиране – Част Архитектура</h3>
                             <span className="text-blue-600 dark:text-blue-400 font-semibold group-hover:underline">Отвори калкулатор →</span>
                         </div>
                     </Card>
@@ -64,10 +61,7 @@ export default function App() {
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
                                 </svg>
                             </div>
-                            <h3 className="text-2xl font-bold text-bunker-800 dark:text-bunker-100 mb-3">Част Конструкции</h3>
-                            <p className="text-bunker-500 dark:text-bunker-400 text-sm mb-6 flex-grow">
-                                Калкулатор за конструктивно проектиране, халета, подпорни стени и специализирани конструкции.
-                            </p>
+                            <h3 className="text-xl font-bold text-bunker-800 dark:text-bunker-100 mb-6 flex-grow flex items-center">Себестойност на проектиране – Част Конструкции</h3>
                             <span className="text-amber-600 dark:text-amber-400 font-semibold group-hover:underline">Отвори калкулатор →</span>
                         </div>
                     </Card>
